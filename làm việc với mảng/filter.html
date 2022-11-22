@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- <body>
+    filter dung de loc ra cac phan tu thoa man cac dieu kien - tao ra filter2 hoat dong nhu phuong thuc filter
+-->
+    <script>
+    Array.prototype.filter2=function(cb){
+        var output=[];
+        for(var index in this){
+            if(this.hasOwnProperty(index)){
+                var result =cb(this[index],index,this);
+                if(result){
+                    output.push(this[index]);
+                }
+            }
+        }
+        return output;
+    }
+
+        var courses =[
+            {
+                name: 'javaScript',
+                coin: 700
+            },
+            {
+                name: 'PHP',
+                coin: 123,
+            },
+            {
+                name: 'Ruby',
+                coin: 345
+            }
+        ];
+var newFilter =courses.filter2(function(course){
+    return course.coin>200;
+})
+
+console.log(newFilter);
+    
+
+</script>
+</body>
+</html>

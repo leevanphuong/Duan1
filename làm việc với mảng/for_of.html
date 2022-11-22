@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+        var myInfo=[
+            'phuongle',
+            19
+        ];
+
+        var myInfo2={
+           name: 'phuongle',
+           age: 19
+        };
+        // lay ra key cua object
+        for(var value of Object.keys(myInfo2)){
+            console.log(value)
+        }
+        // lay ra value cua object
+        for(var value2 of Object.values(myInfo2)){
+            console.log(value2)
+        }
+        // lay phan tu trong array
+        for(var key of myInfo){
+            console.log(key)
+        }
+     </script>
+</body>
+</html>

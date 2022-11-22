@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //     var couses=[
+        //     {
+        //         id: 1,
+        //         name: 'Javascrip',
+        //         coin: 200
+        //     },
+        //     {
+        //         id: 2,
+        //         name: 'React',
+        //         coin: 400
+        //     },
+        //     {
+        //         id: 3,
+        //         name: 'Java',
+        //         coin: 500
+        //     },
+        //     {
+        //         id: 4,
+        //         name: 'Ruby',
+        //         coin: 600
+        //     },
+        //     {
+        //         id: 5,
+        //         name: 'PHP',
+        //         coin: 700
+        //     }
+        // ];
+        // var i=0;
+        // function coinhandler(a,b){
+        //     i++;
+        //     var total = a+b.coin;
+        //     console.table({
+        //         'Lượt chạy: ': i,
+        //         'Biến tích chữ: ': a,
+        //         'Giá khóa học: ':b.coin,
+        //         'Tích trữ được: ':total,
+
+        //     });
+        //     return total;
+        //  }
+
+        // var totalCoin=couses.reduce(coinhandler,0);
+        // // console.log(totalCoin);
+
+        // // làm ngắn gọn
+
+        // var newTotal=couses.reduce((a,b) =>a+b.coin,0);
+        // console.log(newTotal);
+
+        var sports = [
+    {
+        name: 'Bơi lội',
+        gold: 11
+    },
+    {
+        name: 'Boxing',
+        gold: 3
+    },
+    {
+        name: 'Đạp xe',
+        gold: 4
+    },
+    {
+        name: 'Đấu kiếm',
+        gold: 5
+    },
+];
+// function getTotal(sports){
+// var totalgold= sports.reduce(function(a,b){
+//     return a+b.gold
+// },0);
+//     return totalgold;
+// }
+// console.log(getTotal(sports))
+
+
+//thêm bài tập về reduce
+var array =[1, 2, [3, 4], 5, 6, [7, 8, 9]];
+var newArray =array.reduce(function(a,b){
+    return a.concat(b);
+},[]);
+console.log(newArray)
+
+//b2
+var topic=[
+    {
+        topic: 'Front-end',
+        courses: [
+            {
+                id:1,
+                title: 'HTML,CSS'
+            },
+            {
+                id:2,
+                title: 'Javascript'
+            }
+        ]
+    },
+    {
+        topic: 'Back-end',
+        courses: [
+            {
+                id:3,
+                title: 'PHP'
+            },
+            {
+                id:4,
+                title: 'Nodejs'
+            }
+        ]
+    }
+
+]
+var list = topic.reduce(function(a,b){
+    return a.concat(b.courses);
+}, [])
+
+console.log(list)
+
+var htmls= list.map(function(courses){
+    return `
+        ${courses.title},
+        ${courses.id}
+    `;
+})
+console.log(htmls.join(''));
+    </script>
+</body>
+</html>
